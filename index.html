@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloodcode Music Player</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html, body {margin:0;padding:0;height:100%;font-family:'Orbitron',sans-serif;}
+    body {
+      background: url('FFTL%20Bloodcode%20%20CROSSOVER%20layered%20NEW.jpeg') no-repeat center/cover fixed;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .player-container {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0,0.6);
+      padding:2rem;
+      border-radius:2rem;
+      box-shadow:0 0 30px rgba(255,0,150,0.5);
+      max-width:95vw;color:#fff;text-align:center;
+    }
+    .equalizer {
+      display:flex;gap:4px;justify-content:center;align-items:flex-end;
+      height:40px;margin:1rem 0;
+    }
+    .bar {
+      width:6px;background:#e32c92;animation:bounce 1s infinite ease-in-out alternate;
+    }
+    .bar:nth-child(2){animation-delay:.2s}
+    .bar:nth-child(3){animation-delay:.4s}
+    .bar:nth-child(4){animation-delay:.6s}
+    .bar:nth-child(5){animation-delay:.8s}
+    @keyframes bounce {0%{height:10%}100%{height:100%}}
+    iframe {border:0;width:100%;max-width:400px;height:720px;}
+    @media(max-width:480px){iframe{height:780px}}
+  </style>
+</head>
+<body>
+  <div class="player-container">
+    <h1>Bloodcode</h1>
+    <div class="equalizer">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div>
+    </div>
+    <iframe
+      src="https://bandcamp.com/EmbeddedPlayer/album=3957519055/size=large/bgcol=ffffff/linkcol=f171a2/transparent=true/"
+      seamless>
+      <a href="https://bloodcode.bandcamp.com/album/shizukana">SHIZUKANA (静かな) by BLOOD CODE</a>
+    </iframe>
+  </div>
+</body>
+</html>
